@@ -5,6 +5,8 @@ import Todo from './Component/Todo';
 import React,{ useState } from 'react';
 import Addcomponent from './Component/Addcomponent';
 import Addtwonumb from './Component/Addtwonumb';
+import Increadecremet from './Component/Increadecremet';
+import Searchbar from './Component/Searchbar';
 function App() {
   return (
     <div >
@@ -13,6 +15,8 @@ function App() {
         <Todo/>
         <Addcomponent/>
         <Addtwonumb />
+        <Increadecremet />
+        <Searchbar/>
     </div>
   );
 }
