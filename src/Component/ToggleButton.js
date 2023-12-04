@@ -12,7 +12,7 @@ const ToggleButton = () => {
         {togglebtn ?<div className='toggle-left'>Of</div>:
         <div className='toggleright'>On</div>}
       </div>
-      <p>{togglebtn ? "Enable Button" : "Disable Button"}</p>
+      <p style={{padding:"5px 20px", backgroundColor:"green", margin:"15px 0px", borderRadius:"6px"}}>{togglebtn ? "Enable Button" : "Disable Button"}</p>
     
     </div>
   )

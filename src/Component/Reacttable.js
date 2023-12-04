@@ -3,6 +3,7 @@ import {DataGrid} from '@mui/x-data-grid';
 import axios from 'axios'
 function Reacttable (){
     const [data, setData] = useState([]);
+    const [searchterm, setSearchterm] = useState("")
     const getnbadata = async => {
             axios.get("https://www.balldontlie.io/api/v1/teams").then(res => {
             setData(res.data.data);
@@ -25,9 +26,24 @@ function Reacttable (){
         conference: row.conference,
         division: row.division
     }))
-    console.log(data)
+    // console.log(data)
+    const searchhandle =(event) =>{
+       const searchterm = event.target.value.toLowerCase();
+       setSearchterm(searchterm);
+    
+        const filterdata = data.filter((item )=>
+          item.id.toString().toLowerCase().includes(searchterm) ||
+          item.city.toLowerCase().includes(searchterm) ||
+          item.abbreviation.toLowerCase().includes(searchterm) ||
+          item.conference.toLowerCase().includes(searchterm) ||
+          item.division.toLowerCase().includes(searchterm) 
+          );
+          setData(filterdata);
+    };
      return (
     <div>
+      <input type='text'  placeholder='search...' value={searchterm} onChange={searchhandle}/>
+      <button onClick={getnbadata}>Search</button>
       <DataGrid rows={rows}
       columns={columns}
       pageSize={10}

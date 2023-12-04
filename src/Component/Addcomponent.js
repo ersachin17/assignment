@@ -23,7 +23,6 @@ inputdata[i] = onChangeValue.target.value;
         {val.map((data,i) => {
             return( 
             <div>
-                 <h3>Added Another Compnent</h3>
                 <input value={data } onChange={e => handleChange(e,i)}/>
                <button onClick={()=> handledelete(i)} style={{padding:"5px 20px", backgroundColor:"green", margin:"15px 0px", borderRadius:"6px"}} >X</button>
             </div>
