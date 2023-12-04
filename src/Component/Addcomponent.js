@@ -32,7 +32,7 @@ const BinaryTree = ({ label, depth }) => {
 
   return (
     <TreeNode label={label}>
-      <button onClick={addChild}>Add Component</button>
+      <button style={{padding:"5px 20px", backgroundColor:"green",borderRadius:"6px", margin:"0px 5px"}}onClick={addChild}>Add Component</button>
       {renderChildNodes()}
     </TreeNode>
   );
