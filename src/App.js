@@ -7,6 +7,8 @@ import Addcomponent from './Component/Addcomponent';
 import Addtwonumb from './Component/Addtwonumb';
 import Increadecremet from './Component/Increadecremet';
 import Searchbar from './Component/Searchbar';
+import Reacttable from './Component/Reacttable'
+
 function App() {
   return (
     <div >
@@ -17,6 +19,7 @@ function App() {
         <Addtwonumb />
         <Increadecremet />
         <Searchbar/>
+        <Reacttable/>
     </div>
   );
 }
