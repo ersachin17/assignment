@@ -2,11 +2,13 @@ import React ,{useEffect,useState} from 'react';
 import {DataGrid} from '@mui/x-data-grid';
 import axios from 'axios'
 function Reacttable (){
+     const [originaldata, setOriginaldata] = useState([])
     const [data, setData] = useState([]);
     const [searchterm, setSearchterm] = useState("")
     const getnbadata = async => {
             axios.get("https://www.balldontlie.io/api/v1/teams").then(res => {
             setData(res.data.data);
+            setOriginaldata(res.data.data);
            })
     } 
     useEffect(() =>{
@@ -31,7 +33,7 @@ function Reacttable (){
        const searchterm = event.target.value.toLowerCase();
        setSearchterm(searchterm);
     
-        const filterdata = data.filter((item )=>
+        const filterdata = originaldata.filter((item )=>
           item.id.toString().toLowerCase().includes(searchterm) ||
           item.city.toLowerCase().includes(searchterm) ||
           item.abbreviation.toLowerCase().includes(searchterm) ||

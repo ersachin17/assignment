@@ -1,36 +1,49 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
-const Addcomponent = () => {
-    const [val, setVal] = useState([])
-    const handeldadd = () =>{
-        const abc = [...val, []]
-        setVal(abc)
+const TreeNode = ({ label, children }) => (
+  <div style={{ border: '1px solid #ccc', padding: '8px', margin: '8px' }}>
+    {label}
+    {children}
+  </div>
+);
+
+const BinaryTree = ({ label, depth }) => {
+  const [childCount, setChildCount] = useState(0);
+
+  const addChild = () => {
+    setChildCount(prevCount => prevCount + 1);
+  };
+
+  const renderChildNodes = () => {
+    if (depth <= 0) {
+      return null;
     }
-    const handleChange= (onChangeValue, i) =>{
-const inputdata = [...val]
-inputdata[i] = onChangeValue.target.value;
-  setVal(inputdata)
+
+    const childNodes = [];
+
+    for (let i = 1; i <= childCount; i++) {
+      childNodes.push(
+        <BinaryTree key={i} label={`${label}${i}`} depth={depth - 1} />
+      );
     }
-     const handledelete = (i) =>{
-           const deletval = [...val]
-           deletval.splice(i, 1)
-            setVal(deletval)
-     }
-    console.log(val, "data")
+
+    return childNodes;
+  };
+
   return (
-    <div style={{textAlign:'center'}}>
-        <button style={{padding:"5px 20px", backgroundColor:"green", margin:"15px 0px", borderRadius:"6px"}} onClick={()=> handeldadd()}>Add Component</button>
-        {val.map((data,i) => {
-            return( 
-            <div>
-                <input value={data } onChange={e => handleChange(e,i)}/>
-               <button onClick={()=> handledelete(i)} style={{padding:"5px 20px", backgroundColor:"green", margin:"15px 0px", borderRadius:"6px"}} >X</button>
-            </div>
-            )
-        })}
+    <TreeNode label={label}>
+      <button onClick={addChild}>Add Component</button>
+      {renderChildNodes()}
+    </TreeNode>
+  );
+};
+
+const App = () => {
+  return (
+    <div >
+      <BinaryTree label="A" depth={3} />
     </div>
-  )
-}
+  );
+};
 
-export default Addcomponent
-
+export default App;
