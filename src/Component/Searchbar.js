@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-
 const Searchbar = () => {
+
   const array = [
          {id:1, name:"Rahul", Work:"Student"},
          {id:2, name:"shyam", Work:"Developer"},
