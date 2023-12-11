@@ -25,8 +25,8 @@ const Searchbar = () => {
   }
   return (
     <div style={{textAlign:"center"}}>
-        <input type='text' placeholder='search...' value={searchterm} onChange={handlesearch} />
-        <button onClick={handlesearch} >Search</button>
+        <input className="border" type='text' placeholder='search...' value={searchterm} onChange={handlesearch} />
+        <button className='border 2px solid black rounded-md bg-green-600 px-2 mx-4' onClick={handlesearch} >Search</button>
         {data.map((item, id) =>(
           <li style={{listStyle:"none"}} key={id}>{item.name} ({item.Work})</li>
         ))}

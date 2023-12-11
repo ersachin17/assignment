@@ -6,7 +6,7 @@ import SearchIcon from '@mui/icons-material/Search';
 const DataTable = () => {
   const [data, setData] = useState([
     { id: 3, customername: 'Bob Smith', lastseen: '2023-01-15', orders: '21',totalspent:'200$', latestpurchase:'2023-01-12 /9:34pm', news:'X', segment:'Regulara'  },
-    { id: 4, customername: 'advait singh', lastseen: '2023-01-16', orders: '11',totalspent:'90$', latestpurchase:'2023-01-08/11:34pm', news:'X', segment:'inactive'  },
+    { id: 4, customername: 'advait singh', lastseen: '2023-01-16', orders: '11',totalspent:'90$', latestpurchase:'2023-01-08/11:34pm', news:"X", segment:'inactive'  },
     { id: 5, customername: 'Rohit sharma', lastseen: '2023-01-18', orders: '10',totalspent:'100$', latestpurchase:'2023-01-02 /1:34pm', news:'X', segment:'ordered once'  },
     { id: 6, customername: 'amrita das', lastseen: '2023-01-12', orders: '21',totalspent:'250$', latestpurchase:'2023-01-13 /2:4pm', news:'X', segment:'Regular'  },
     { id: 7, customername: 'Ravi Bishnoi', lastseen: '2023-01-28', orders: '19',totalspent:'120$', latestpurchase:'2023-01-08 /9:14pm', news:'X', segment:'ordered once'  },
