@@ -7,7 +7,7 @@ const ToggleButton = () => {
         console.log(togglebtn, "value")
     }
   return (
-    <div className='App'>
+    <div className='App mt-6'>
       <div onClick={handleclick} className='toggle'>
         {togglebtn ?<div className='toggle-left'>Of</div>:
         <div className='toggleright'>On</div>}

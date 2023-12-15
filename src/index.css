@@ -14,3 +14,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+input{
+  box-shadow:1px 1px 4px rgba(0,0, 0, 0.2);
+  color:#000
+}
+label{
+  color: #4b4b4b;
+}
+input:hover{
+   border-color: #aa2aff;
+}
+input:focus{
+  border-color: #9900ff;
+}
+p{
+  font-weight: 700;
+  color: #000;
+}
+p span a{
+  font-weight: bold;
+  color:#9900ff;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  text-decoration: none;
+
+}

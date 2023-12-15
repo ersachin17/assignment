@@ -20,10 +20,10 @@ const TwoInputAddition = () => {
 
   return (
     <div style={{textAlign:"center"}}>
-      <h2>Some of Two Numbers</h2>
-      <label>
+      <h2 className='mb-6'>Some of Two Numbers</h2>
+      <label >
         Number 1:
-        <input type="number" value={number1} onChange={handleNumber1Change} />
+        <input className='mb-5' type="number" value={number1} onChange={handleNumber1Change} />
       </label>
       <br />
       <label>

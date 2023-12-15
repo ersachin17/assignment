@@ -40,7 +40,7 @@ const Form = () => {
       </div>
       <div style={{textAlign:"center"}}>
         <h3>Show and hide element on screen</h3>
-        <button style={{background:"green",color:"white", padding:"0px 20px",borderRadius:"8px"}} onClick={showhandler}>{isShow ? "Hide" : "Show"}</button>
+        <button className='mt-6' style={{background:"green",color:"white", padding:"0px 20px",borderRadius:"8px"}} onClick={showhandler}>{isShow ? "Hide" : "Show"}</button>
         <h2>{isShow ? "The element is show" : " "}</h2>
       </div>
       {/* <h3>Enable and disable Button</h3> */}
